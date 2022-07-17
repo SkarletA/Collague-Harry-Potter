@@ -242,7 +242,7 @@
     "image": "http://hp-api.herokuapp.com/images/goyle.jpg"
   }
 ],
-"staff": [
+"staffs": [
   {
     "name": "Minerva McGonagall",
     "species": "human",

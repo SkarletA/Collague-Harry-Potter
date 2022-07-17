@@ -3,12 +3,13 @@
 
 $font-family: 'Open Sans', sans-serif;
 $background-color: #000000;
-$background-image-desktop: url("https://svgshare.com/i/j9e.svg");
+$background-image-desktop: url("https://svgshare.com/i/j9W.svg");
 $color-title: #ffffff;
 $breakpoint-xs: 360px;
 $breakpoint-sm: 767px;
 $breakpoint-md: 1023px;
 $breakpoint-lg: 1360px;
+
 
 
 body {
@@ -33,10 +34,14 @@ body {
 
 // Components.
 @import './components/NavBar';
-@import '../App';
+@import './components/Home';
 @import './components/ButtonAdd';
 @import './components/ButtonFavorite';
 @import './components/ButtonStaffs';
 @import './components/ButtonStudents';
+@import './components/CardStuddents';
+@import './components/StudentsList';
+@import './components/StaffsList';
+@import './components/CardStaffs';
 
 // Screens.

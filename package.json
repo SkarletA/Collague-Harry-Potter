@@ -41,6 +41,8 @@
     ]
   },
   "devDependencies": {
+    "node-fetch": "^3.2.8",
+    "react-router-dom": "^6.3.0",
     "sass": "^1.53.0"
   }
 }

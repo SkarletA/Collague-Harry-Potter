@@ -1,0 +1,16 @@
+.StaffsList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 1.5em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 25em;
+
+  @media (min-width: 767px) and (max-width: 1023px)  {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(6, 2fr);
+  }
+}
