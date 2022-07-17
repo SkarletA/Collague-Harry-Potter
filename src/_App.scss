@@ -1,0 +1,21 @@
+.App{
+  &__image-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 11.52%;
+    flex-direction: column;
+    p {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row; 
+    margin-top: 2em;
+  }
+}

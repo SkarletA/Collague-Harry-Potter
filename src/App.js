@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable jsx-a11y/img-redundant-alt */
+import ButtonStaffs from "./components/ButtonStaffs";
+import ButtonStudents from "./components/ButtonStudents";
+import NavBar from "./components/NavBar";
+import './styles/styles.scss';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <section className="App">
+      <div className="App__image-principal">
+        <img src='https://svgshare.com/i/jAf.svg' alt='title-harry-potter' />
+        <p className="App__select-filter">Selecciona tu filtro</p>
+      </div>
+      <section className="App__btns">
+        <ButtonStudents />
+        <ButtonStaffs />
+      </section>
+      <NavBar />
+    </section>
   );
 }
 

@@ -1,0 +1,42 @@
+// UI Settings.
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+$font-family: 'Open Sans', sans-serif;
+$background-color: #000000;
+$background-image-desktop: url("https://svgshare.com/i/j9e.svg");
+$color-title: #ffffff;
+$breakpoint-xs: 360px;
+$breakpoint-sm: 767px;
+$breakpoint-md: 1023px;
+$breakpoint-lg: 1360px;
+
+
+body {
+  background-color: $background-color;
+
+  @media (min-width: 767px) {
+    background-image: $background-image-desktop;
+    background-repeat: no-repeat;
+  }
+
+}
+
+* {
+  font-family: $font-family;
+  color: $color-title;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+// Components.
+@import './components/NavBar';
+@import '../App';
+@import './components/ButtonAdd';
+@import './components/ButtonFavorite';
+@import './components/ButtonStaffs';
+@import './components/ButtonStudents';
+
+// Screens.
