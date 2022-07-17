@@ -6,7 +6,7 @@ import ButtonStaffs from "./ButtonStaffs";
 import ButtonStudents from "./ButtonStudents";
 import NavBar from "./NavBar";
 import '../styles/styles.scss';
-import { Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -16,13 +16,10 @@ const Home = () => {
         <p className="App__select-filter">Selecciona tu filtro</p>
       </div>
       <section className="App__btns">
-        <Link to="students">
-          <ButtonStudents />
-        </Link>
-        <Link to="staffs" >
-          <ButtonStaffs />
-        </Link>
+        <ButtonStudents />
+        <ButtonStaffs />
       </section>
+      <Outlet />
       <NavBar />
     </section>
   );
