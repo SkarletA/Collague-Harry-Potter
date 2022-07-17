@@ -19,7 +19,9 @@ const Home = () => {
         <Link to="students">
           <ButtonStudents />
         </Link>
-        <ButtonStaffs />
+        <Link to="staffs" >
+          <ButtonStaffs />
+        </Link>
       </section>
       <NavBar />
     </section>

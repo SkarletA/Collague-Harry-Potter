@@ -3,7 +3,7 @@
 
 $font-family: 'Open Sans', sans-serif;
 $background-color: #000000;
-$background-image-desktop: url("https://svgshare.com/i/j9e.svg");
+$background-image-desktop: url("https://svgshare.com/i/j9W.svg");
 $color-title: #ffffff;
 $breakpoint-xs: 360px;
 $breakpoint-sm: 767px;
@@ -41,5 +41,7 @@ body {
 @import './components/ButtonStudents';
 @import './components/CardStuddents';
 @import './components/StudentsList';
+@import './components/StaffsList';
+@import './components/CardStaffs';
 
 // Screens.
