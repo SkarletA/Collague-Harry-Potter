@@ -1,0 +1,82 @@
+.cardStudents {
+  background-color: #ffffff;
+  width: 140px;
+  height: 181px;
+  border-radius: 10px;
+  &__name_students {
+    color: black;
+    text-align: center;
+    font-size: 18px;
+  }
+}
+.cardStudentsDead {
+  background-color: #CCCCCC;
+  width: 140px;
+  height: 181px;
+  border-radius: 10px;
+  &__name_students {
+    color: black;
+    text-align: center;
+    font-size: 18px;
+  }
+}
+.gryCssColor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(358.61deg, #FF0000 4.67%, #FED482 96.97%);
+}
+
+.slyCssColor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(135deg, #1C792B 0%, #82E95E 100%);
+}
+.ravCssColor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(135deg, #0597B7 0%, #66D1FF 100%);
+}
+
+.hufCssColor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(135deg, #FFC700 0%, #FFF388 100%);
+}
+
+.image_students {
+  width: 69px;
+  height: 69px;
+  border-radius: 50%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.info_students {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 0.5em;
+  font-size: 11px;
+  img {
+    width: 20px;
+    height: 22px;
+  }
+  &__grado {
+    color: black;
+  }
+  &__live_status {
+    color: black;
+  }
+}

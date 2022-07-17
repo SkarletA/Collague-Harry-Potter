@@ -11,6 +11,7 @@ $breakpoint-md: 1023px;
 $breakpoint-lg: 1360px;
 
 
+
 body {
   background-color: $background-color;
 
@@ -33,10 +34,12 @@ body {
 
 // Components.
 @import './components/NavBar';
-@import '../App';
+@import './components/Home';
 @import './components/ButtonAdd';
 @import './components/ButtonFavorite';
 @import './components/ButtonStaffs';
 @import './components/ButtonStudents';
+@import './components/CardStuddents';
+@import './components/StudentsList';
 
 // Screens.

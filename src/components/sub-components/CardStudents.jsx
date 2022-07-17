@@ -1,16 +1,29 @@
 import React from "react";
+import '../../styles/styles.scss';
 
+const CardStudents = ({ name, house, image, hogwartsStudent, alive }) => {
+  const houseColor = {
+    'Gryffindor': 'gryCssColor',
+    'Slytherin': 'slyCssColor',
+    'Ravenclaw': 'ravCssColor',
+    'Hufflepuff': 'hufCssColor',
+  }
+  console.log(alive);
+  const test = alive ? 'cardStudents' : 'cardStudentsDead'
 
-const CardStudents = () => {
-  <section>
-    <div>
-      <img src="" alt="" />
+  return (
+  <section className={test}>
+    <div className={houseColor[house]}>
+      <img className="image_students" src={image} alt="" />
     </div>
-    <p></p>
-    <p></p>
-    <p></p>
-    <img src="" alt="" />
+    <p className="cardStudents__name_students">{name}</p>
+    <div className="info_students">
+      <div className="info">
+        <p className="info_students__live_status">{alive ? "VIVO": "FINADO"}</p>
+        {hogwartsStudent ? <p className="info_students__grado">Estudiante</p>: ''}
+      </div>
+      <img className="icon_favorite" src="https://svgshare.com/i/jBa.svg" alt="icon-favorito-transparent" />
+    </div>
   </section>
-}
-
+)};
 export default CardStudents;
