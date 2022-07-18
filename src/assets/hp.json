@@ -22,7 +22,7 @@
       "actor": "Daniel Radcliffe",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/harry.jpg",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": "933e085d-0441-426a-8dbb-dec7ba7f1d61",
@@ -46,7 +46,7 @@
       "actor": "Emma Watson",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/hermione.jpeg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "f11689e6-3e76-4702-ad3f-a45bef6f4542",
@@ -118,7 +118,7 @@
       "actor": "Robert Pattinson",
       "alive": false,
       "image": "http://hp-api.herokuapp.com/images/cedric.png",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": "fe516bb3-ddcd-47d8-a3ac-a36cd4cacfd3",
@@ -288,7 +288,7 @@
       "actor": "Dame Maggie Smith",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/mcgonagall.jpg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "487eb2a2-3ad2-434c-86f6-b1545d6a2fe1",
@@ -336,7 +336,7 @@
       "actor": "Robbie Coltrane",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/hagrid.png",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "7f13bf8c-37cf-4818-8762-b7315ad625ee",
@@ -1235,51 +1235,75 @@
   ],
   "favorites": [
     {
-      "id": "bbb514be-b7d2-4020-b4b4-83c5780a4823",
-      "name": "Harry Potter",
+      "id": "ee10cb40-638b-4d17-a4d6-f8af65d7c153",
+      "name": "Minerva McGonagall",
       "species": "human",
-      "gender": "male",
+      "gender": "female",
       "house": "Gryffindor",
-      "dateOfBirth": "31-07-1980",
-      "yearOfBirth": 1980,
-      "ancestry": "half-blood",
-      "eyeColour": "green",
+      "dateOfBirth": "04-10-1925",
+      "yearOfBirth": 1925,
+      "ancestry": "",
+      "eyeColour": "",
       "hairColour": "black",
       "wand": {
-        "wood": "holly",
-        "core": "phoenix feather",
-        "length": 11
+        "wood": "",
+        "core": "",
+        "length": ""
       },
-      "patronus": "stag",
-      "hogwartsStudent": true,
-      "hogwartsStaff": false,
-      "actor": "Daniel Radcliffe",
+      "patronus": "tabby cat",
+      "hogwartsStudent": false,
+      "hogwartsStaff": true,
+      "actor": "Dame Maggie Smith",
       "alive": true,
-      "image": "http://hp-api.herokuapp.com/images/harry.jpg",
+      "image": "http://hp-api.herokuapp.com/images/mcgonagall.jpg",
       "favorite": false
     },
     {
-      "id": "5d67ac60-df50-43b1-8355-037d7b2fb4a0",
-      "name": "Cedric Diggory",
+      "id": "933e085d-0441-426a-8dbb-dec7ba7f1d61",
+      "name": "Hermione Granger",
       "species": "human",
-      "gender": "male",
-      "house": "Hufflepuff",
-      "dateOfBirth": "",
-      "yearOfBirth": 1977,
-      "ancestry": "",
-      "eyeColour": "grey",
+      "gender": "female",
+      "house": "Gryffindor",
+      "dateOfBirth": "19-09-1979",
+      "yearOfBirth": 1979,
+      "ancestry": "muggleborn",
+      "eyeColour": "brown",
       "hairColour": "brown",
       "wand": {
-        "wood": "ash",
-        "core": "unicorn hair",
-        "length": 12.25
+        "wood": "vine",
+        "core": "dragon heartstring",
+        "length": ""
       },
-      "patronus": "",
+      "patronus": "otter",
       "hogwartsStudent": true,
       "hogwartsStaff": false,
-      "actor": "Robert Pattinson",
-      "alive": false,
-      "image": "http://hp-api.herokuapp.com/images/cedric.png",
+      "actor": "Emma Watson",
+      "alive": true,
+      "image": "http://hp-api.herokuapp.com/images/hermione.jpeg",
+      "favorite": false
+    },
+    {
+      "id": "d677cb99-2c1f-41a2-b762-08cbada5c98c",
+      "name": "Rubeus Hagrid",
+      "species": "half-giant",
+      "gender": "male",
+      "house": "Gryffindor",
+      "dateOfBirth": "06-12-1928",
+      "yearOfBirth": 1928,
+      "ancestry": "half-blood",
+      "eyeColour": "black",
+      "hairColour": "black",
+      "wand": {
+        "wood": "oak",
+        "core": "",
+        "length": 16
+      },
+      "patronus": "",
+      "hogwartsStudent": false,
+      "hogwartsStaff": true,
+      "actor": "Robbie Coltrane",
+      "alive": true,
+      "image": "http://hp-api.herokuapp.com/images/hagrid.png",
       "favorite": false
     }
   ]

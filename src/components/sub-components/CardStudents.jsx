@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import { connect} from "react-redux";
 import { setFavorite } from "../../actions";
-//import { getFavorite } from "../../api/requestFavorite";
+import { deleteFavorite, getFavorite, postFavorite } from "../../api/requestFavorite";
+import { updateStudents } from "../../api/requestStudents";
 import '../../styles/styles.scss';
 
 const CardStudents = ({
@@ -12,10 +13,12 @@ const CardStudents = ({
   alive,
   favorite,
   id,
-  student
+  student,
+  refresh,
+  setRefresh
 }) => {
 
-  // const [tableFavorite, setTableFavorite]= useState([]);
+  const refreshData = () => setRefresh(!refresh);
 
   const handleOnFavorite = async () => {
 
@@ -24,62 +27,23 @@ const CardStudents = ({
     const data = {
       favorite: favorite ? false : true
     }
-
-
-    const getFavorite = () => {
-      const request = {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' }
-      }
-      const test = fetch("http://localhost:3001/favorites", request)
-        .then((response) => response.json())
-        .then(data => data)
-        .catch((err) => console.log(err));
-      return test;
-    };
     const favoriteList = await getFavorite();
     console.log(favoriteList, favorite);
 
-    if (favorite) {
-      const deleteRequest = {
-        method: 'DELETE',
-        headers: { 'Content-Type': 'application/json' }
-      }
-      fetch(`http://localhost:3001/favorites/${id}`, deleteRequest)
-        .then((response) => response.json())
-        .catch((err) => console.log(err));
 
-        const requestOption = {
-          method: 'PATCH',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
-        }
-        fetch(`http://localhost:3001/students/${id}`, requestOption)
-          .then((response) => response.json())
-          .catch((err) => console.log(err));
+    if (favorite) {
+      await deleteFavorite(id);
+      await updateStudents(data, id);
+      refreshData();
 
     } else {
       if (favoriteList.length < 5) {
-        const postRequest= {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(student),
-        }
-        fetch("http://localhost:3001/favorites", postRequest)
-          .then((response) => response.json())
-          .catch((err) => console.log(err));
-
-        const requestOption = {
-          method: 'PATCH',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
-        }
-        fetch(`http://localhost:3001/students/${id}`, requestOption)
-          .then((response) => response.json())
-          .catch((err) => console.log(err));
-        }
+        await postFavorite(student);
+        await updateStudents(data, id);
+        refreshData();
+      }
     }
-    }
+  }
 
   const houseColor = {
     'Gryffindor': 'gryCssColor',
@@ -119,6 +83,7 @@ const CardStudents = ({
     </div>
   </section>
 )};
+
 
 const mapDispatchToProps = {
   setFavorite,

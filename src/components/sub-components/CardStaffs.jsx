@@ -1,7 +1,9 @@
 import React from "react";
 import { connect} from "react-redux";
+import { deleteFavorite, getFavorite, postFavorite } from "../../api/requestFavorite";
 import { setFavorite } from "../../actions";
 import '../../styles/styles.scss';
+import { updateStaffs } from "../../api/requestStaffs";
 
 const CardStaffs = (
   {
@@ -12,23 +14,36 @@ const CardStaffs = (
     alive,
     favorite,
     id,
-    staff
+    staff,
+    refreshData,
+    setRefreshData
   }) => {
-  const handleOnFavorite = () => {
+
+    const refresh = () => setRefreshData(!refreshData);
+
+  const handleOnFavorite = async () => {
     setFavorite({ ...staff, favorite:true });
     console.log(setFavorite({ staff }));
     const data = {
-      favorite: true
+      favorite: favorite ? false : true
     }
-    console.log(data);
-    const requestOption = {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data),
+
+    console.log(staff);
+    const favoriteList = await getFavorite();
+    console.log(favoriteList, favorite);
+
+
+    if (favorite) {
+      await deleteFavorite(id);
+      await updateStaffs(data, id);
+      refresh();
+    } else {
+      if (favoriteList.length < 5) {
+        await postFavorite(staff);
+        await updateStaffs(data, id);
+        refresh();
+      }
     }
-    fetch(`http://localhost:3001/staffs/${id}`, requestOption)
-      .then((response) => response.json())
-      .catch((err) => console.log(err));
 
   }
   const houseColor = {

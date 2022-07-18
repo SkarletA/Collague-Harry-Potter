@@ -29,6 +29,7 @@ const StudentsList = () => {
             hogwartsStudent={student.hogwartsStudent}
             id={student.id}
             favorite={student.favorite}
+            refresh={refresh}
             setRefresh={setRefresh}
             student={student}
             gender={student.gender}

@@ -3,6 +3,7 @@ import CardStaffs from "./CardStaffs";
 
 const StaffsList = () => {
   const [Staffs, setStaffs] = useState([]);
+  const [refreshData, setRefreshData] = useState(false);
   useEffect(() => {
     const requestOption = {
       method: 'GET',
@@ -11,7 +12,7 @@ const StaffsList = () => {
     fetch("http://localhost:3001/staffs", requestOption)
       .then((response) => response.json())
       .then((data) => setStaffs(data));
-  }, []);
+  }, [refreshData]);
   return (
     <div className="StaffsList">
       {Staffs.map((staff) => {
@@ -26,6 +27,8 @@ const StaffsList = () => {
             staff={staff}
             favorite={staff.favorite}
             id={staff.id}
+            refreshData={refreshData}
+            setRefreshData={setRefreshData}
           />
         )
       })}
