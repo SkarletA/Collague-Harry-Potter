@@ -10,14 +10,10 @@ export const studentsReducer = (state= initialState, action) => {
       return {... state, students: action.payload };
 
       case SET_FAVORITE:
-        const newStudentsList = [...state.students];
-        const currentStudentsIndex = newStudentsList.findIndex((student) => {
-          return student.id===action.payload.studentId;});
-        if (currentStudentsIndex < 0) {
-          return state;
+        return {
+          ...state,
+          myList : [...state.myList, action.payload]
         }
-        newStudentsList[currentStudentsIndex].favorite = !newStudentsList[currentStudentsIndex].favorite;
-      return{...state,Students:newStudentsList}
     default:
       return state;
   }

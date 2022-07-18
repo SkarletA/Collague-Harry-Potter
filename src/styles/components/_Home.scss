@@ -9,13 +9,16 @@
       font-size: 18px;
       font-weight: bold;
     }
+    @media (min-width: 767px) {
+      margin-top: 7%;
+    }
   }
 
   &__btns {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row; 
+    flex-direction: row;
     margin-top: 2em;
   }
 }

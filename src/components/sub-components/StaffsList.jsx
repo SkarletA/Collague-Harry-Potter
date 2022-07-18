@@ -8,7 +8,7 @@ const StaffsList = () => {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     }
-    fetch("http://localhost:3001/Staffs", requestOption)
+    fetch("http://localhost:3001/staffs", requestOption)
       .then((response) => response.json())
       .then((data) => setStaffs(data));
   }, []);
@@ -23,6 +23,9 @@ const StaffsList = () => {
             house={staff.house}
             alive={staff.alive}
             hogwartsStaff={staff.hogwartsStaff}
+            staff={staff}
+            favorite={staff.favorite}
+            id={staff.id}
           />
         )
       })}

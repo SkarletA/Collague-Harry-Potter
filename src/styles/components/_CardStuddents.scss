@@ -99,7 +99,13 @@
 }
 
 .btn_favorite_students {
-  background-color: white;
-  border: none;
 
+  &__cardStudents {
+    background-color: white;
+    border: none;
+  }
+  &__cardStudentsDead {
+    background-color: #CCCCCC;
+    border: none;
+  }
 }

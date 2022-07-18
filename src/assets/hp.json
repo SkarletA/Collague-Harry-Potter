@@ -22,7 +22,7 @@
       "actor": "Daniel Radcliffe",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/harry.jpg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "933e085d-0441-426a-8dbb-dec7ba7f1d61",
@@ -118,7 +118,7 @@
       "actor": "Robert Pattinson",
       "alive": false,
       "image": "http://hp-api.herokuapp.com/images/cedric.png",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "fe516bb3-ddcd-47d8-a3ac-a36cd4cacfd3",
@@ -1233,5 +1233,54 @@
       "image": "http://hp-api.herokuapp.com/images/filch.jpg"
     }
   ],
-  "fav": []
+  "favorites": [
+    {
+      "id": "bbb514be-b7d2-4020-b4b4-83c5780a4823",
+      "name": "Harry Potter",
+      "species": "human",
+      "gender": "male",
+      "house": "Gryffindor",
+      "dateOfBirth": "31-07-1980",
+      "yearOfBirth": 1980,
+      "ancestry": "half-blood",
+      "eyeColour": "green",
+      "hairColour": "black",
+      "wand": {
+        "wood": "holly",
+        "core": "phoenix feather",
+        "length": 11
+      },
+      "patronus": "stag",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "actor": "Daniel Radcliffe",
+      "alive": true,
+      "image": "http://hp-api.herokuapp.com/images/harry.jpg",
+      "favorite": false
+    },
+    {
+      "id": "5d67ac60-df50-43b1-8355-037d7b2fb4a0",
+      "name": "Cedric Diggory",
+      "species": "human",
+      "gender": "male",
+      "house": "Hufflepuff",
+      "dateOfBirth": "",
+      "yearOfBirth": 1977,
+      "ancestry": "",
+      "eyeColour": "grey",
+      "hairColour": "brown",
+      "wand": {
+        "wood": "ash",
+        "core": "unicorn hair",
+        "length": 12.25
+      },
+      "patronus": "",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "actor": "Robert Pattinson",
+      "alive": false,
+      "image": "http://hp-api.herokuapp.com/images/cedric.png",
+      "favorite": false
+    }
+  ]
 }

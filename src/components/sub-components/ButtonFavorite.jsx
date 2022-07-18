@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { setFavorite } from "../../actions";
 // import { useNavigate } from "react-router-dom";
 //import IconFavorite from "https://svgshare.com/i/jAg.svg";
 
@@ -8,6 +9,7 @@ const ButtonFavorite = () => {
 
   const handleClickFavorite = () => {
     setMenu(!menu);
+    console.log(setFavorite());
   }
 
   return (

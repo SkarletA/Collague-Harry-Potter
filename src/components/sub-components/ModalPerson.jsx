@@ -93,7 +93,7 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
               <input
                 className="formAddPerson__date"
                 type="text"
-                name="yearOfBirth"
+                name="dateOfBirth"
                 onChange={handleChange}
               />
             </div>
