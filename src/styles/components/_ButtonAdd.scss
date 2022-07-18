@@ -2,9 +2,17 @@
   height: 36px;
   width: 140.5px;
   background: #6B63B5;
-  border-radius: 0 20px 0 0;
+  border-radius: 0 0 0 20px;
   font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  transform: rotate(-180deg);
+
+  p {
+    transform: rotate(180deg); 
+  }
+  &__iconAdd {
+    transform: rotate(180deg);
+  }
 }

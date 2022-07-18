@@ -1,10 +1,45 @@
+.container_favorite {
+  display: flex;
+  flex-direction: column;
+  width: 140.5px;
+}
+
 .btn_favorite {
   height: 36px;
-  width: 50%;
+  width: 100%;
   background: #6B63B5;
   font-size: 14px;
-  border-radius: 20px 0 0 0;
+  border-radius: 0 0 20px 0;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  transform: rotate(-180deg);
+  position: relative;
+
+  p {
+    transform: rotate(180deg);
+  }
+  &__icon {
+    transform: rotate(180deg);
+  }
+}
+
+.listFavorite {
+  display: none;
+  width: 281px;
+  background-color: #6B63B5;
+
+  bottom {
+    background-color: #6B63B5;
+  }
+}
+
+.isActive {
+  display: flex;
+  flex-direction: column;
+
+  li {
+    list-style: none;
+    color: #ffffff;
+  }
 }

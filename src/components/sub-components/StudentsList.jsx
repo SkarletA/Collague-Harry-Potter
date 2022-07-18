@@ -11,8 +11,7 @@ const StudentsList = () => {
     fetch("http://localhost:3001/students", requestOption)
       .then((response) => response.json())
       .then((data) => setStudents(data));
-  });
-  console.log(students);
+  }, []);
   return (
     <div className="StudentsList">
       {students.map((student) => {

@@ -11,8 +11,7 @@ const StaffsList = () => {
     fetch("http://localhost:3001/Staffs", requestOption)
       .then((response) => response.json())
       .then((data) => setStaffs(data));
-  });
-  console.log(Staffs);
+  }, []);
   return (
     <div className="StaffsList">
       {Staffs.map((staff) => {

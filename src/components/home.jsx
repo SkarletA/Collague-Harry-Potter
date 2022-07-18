@@ -11,6 +11,7 @@ import { Outlet } from "react-router-dom";
 const Home = () => {
   return (
     <section className="App">
+      <NavBar />
       <div className="App__image-principal">
         <img src='https://svgshare.com/i/jAf.svg' alt='title-harry-potter' />
         <p className="App__select-filter">Selecciona tu filtro</p>
@@ -20,7 +21,6 @@ const Home = () => {
         <ButtonStaffs />
       </section>
       <Outlet />
-      <NavBar />
     </section>
   );
 }

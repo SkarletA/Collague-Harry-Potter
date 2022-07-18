@@ -8,7 +8,6 @@ const CardStudents = ({ name, house, image, hogwartsStudent, alive }) => {
     'Ravenclaw': 'ravCssColor',
     'Hufflepuff': 'hufCssColor',
   }
-  console.log(alive);
   const live = alive ? 'cardStudents' : 'cardStudentsDead'
 
   return (
