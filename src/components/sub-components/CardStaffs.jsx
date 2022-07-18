@@ -9,7 +9,6 @@ const CardStaffs = ({ name, house, image, hogwartsStaff, alive }) => {
     'Hufflepuff': 'hufCssColor',
     '': 'noneCssColor',
   }
-  console.log(alive);
   const live = alive ? 'cardStaffs' : 'cardStaffsDead'
 
   return (

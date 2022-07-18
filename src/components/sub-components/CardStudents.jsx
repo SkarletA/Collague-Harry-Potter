@@ -7,13 +7,13 @@ const CardStudents = ({ name, house, image, hogwartsStudent, alive }) => {
     'Slytherin': 'slyCssColor',
     'Ravenclaw': 'ravCssColor',
     'Hufflepuff': 'hufCssColor',
+    '' : 'noneCssColor',
   }
-  console.log(alive);
   const live = alive ? 'cardStudents' : 'cardStudentsDead'
 
   return (
   <section className={live}>
-    <div className={houseColor[house]}>
+    <div className={`defaultColor ${houseColor[house]}`}>
       <img className="image_students" src={image} alt="" />
     </div>
     <p className="cardStudents__name_students">{name}</p>
