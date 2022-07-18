@@ -1,9 +1,14 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 
 const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
+  const navigate = useNavigate();
 
   const [data, setData] = useState([]);
+  const [refreshData, setRefreshData] = useState(false);
+
+  const refresh = () => setRefreshData(!refreshData);
 
   const handleChange = (e) => {
     let { name, value } = e.target;
@@ -23,34 +28,36 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
   }
   const saveDataPerson = (localData) => {
 
-    const aux = {...localData, id: uuidv4()};
-    console.log(Object.keys(aux));
+    const aux = {...localData, id: uuidv4(), alive: true};
     if (Object.keys(aux).includes('hogwartsStaff')) {
       aux.hogwartsStudent = false
     } else {
       aux.hogwartsStaff = false
     }
-    console.log(JSON.stringify(aux));
     const requestOption = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json'},
       body: JSON.stringify(aux),
     }
     if (localData.hogwartsStudent === true) {
-      console.log("entreee")
       fetch("http://localhost:3001/students", requestOption)
         .then((response) => {
           response.json();
+          refresh();
         })
+        .then(() => navigate("/students"))
         .catch((err) => console.log(err));
     } else {
       fetch("http://localhost:3001/staffs", requestOption)
         .then((response) => {
           response.json();
+          refresh();
         })
+        .then(() => navigate("/staffs"))
         .catch((err) => console.log(err));
       }
     };
+    console.log(data);
 
   const handleClick = async (e) => {
     e.preventDefault();

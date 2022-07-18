@@ -3,6 +3,9 @@ import CardStudents from "./CardStudents";
 
 const StudentsList = () => {
   const [students, setStudents] = useState([]);
+
+  const [refresh, setRefresh] = useState(false);
+
   useEffect(() => {
     const requestOption = {
       method: 'GET',
@@ -11,7 +14,7 @@ const StudentsList = () => {
     fetch("http://localhost:3001/students", requestOption)
       .then((response) => response.json())
       .then((data) => setStudents(data));
-  }, []);
+  }, [refresh]);
   return (
     <div className="StudentsList">
       {students.map((student) => {
@@ -23,6 +26,7 @@ const StudentsList = () => {
             house={student.house}
             alive={student.alive}
             hogwartsStudent={student.hogwartsStudent}
+            setRefresh={setRefresh}
           />
         )
       })}

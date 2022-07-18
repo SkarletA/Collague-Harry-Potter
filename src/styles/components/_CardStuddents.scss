@@ -55,6 +55,23 @@
   background: linear-gradient(135deg, #FFC700 0%, #FFF388 100%);
 }
 
+.noneCssColor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(135deg, #716f69 0%, #c7c5b9 100%);
+}
+
+.defaultColor  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(135deg, #dabbd3 0%, #951542 100%);
+}
 .image_students {
   width: 69px;
   height: 69px;
