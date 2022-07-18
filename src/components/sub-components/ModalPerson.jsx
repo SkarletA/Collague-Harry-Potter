@@ -28,7 +28,7 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
   }
   const saveDataPerson = (localData) => {
 
-    const aux = {...localData, id: uuidv4(), alive: true};
+    const aux = {...localData, id: uuidv4(), alive: true, favorite: false};
     if (Object.keys(aux).includes('hogwartsStaff')) {
       aux.hogwartsStudent = false
     } else {

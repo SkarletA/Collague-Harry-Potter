@@ -23,7 +23,7 @@ const ButtonFavorite = () => {
           <li><img src="" alt="img_person" /></li>
           <li>Harry Potter</li>
           <li>
-            <button type="submit">
+            <button className="btn_delete" type="submit">
               <img src="https://svgshare.com/i/jC8.svg" alt="icon_delete" />
             </button>
           </li>

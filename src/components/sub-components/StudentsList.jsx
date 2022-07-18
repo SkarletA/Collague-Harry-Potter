@@ -26,6 +26,8 @@ const StudentsList = () => {
             house={student.house}
             alive={student.alive}
             hogwartsStudent={student.hogwartsStudent}
+            id={student.id}
+            favorite={student.favorite}
             setRefresh={setRefresh}
           />
         )
