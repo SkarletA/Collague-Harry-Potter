@@ -97,3 +97,15 @@
     color: black;
   }
 }
+
+.btn_favorite_students {
+
+  &__cardStudents {
+    background-color: white;
+    border: none;
+  }
+  &__cardStudentsDead {
+    background-color: #CCCCCC;
+    border: none;
+  }
+}

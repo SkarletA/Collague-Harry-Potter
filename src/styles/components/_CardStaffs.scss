@@ -89,3 +89,15 @@
     color: black;
   }
 }
+
+.btn_favorite_staffs {
+
+  &__cardStaffs {
+    background-color: white;
+    border: none;
+  }
+  &__cardStaffsDead {
+    background-color: #CCCCCC;
+    border: none;
+  }
+}

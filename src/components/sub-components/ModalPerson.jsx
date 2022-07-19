@@ -28,7 +28,7 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
   }
   const saveDataPerson = (localData) => {
 
-    const aux = {...localData, id: uuidv4(), alive: true};
+    const aux = {...localData, id: uuidv4(), alive: true, favorite: false};
     if (Object.keys(aux).includes('hogwartsStaff')) {
       aux.hogwartsStudent = false
     } else {
@@ -57,7 +57,6 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
         .catch((err) => console.log(err));
       }
     };
-    console.log(data);
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -93,7 +92,7 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
               <input
                 className="formAddPerson__date"
                 type="text"
-                name="yearOfBirth"
+                name="dateOfBirth"
                 onChange={handleChange}
               />
             </div>

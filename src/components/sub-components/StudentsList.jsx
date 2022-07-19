@@ -15,6 +15,7 @@ const StudentsList = () => {
       .then((response) => response.json())
       .then((data) => setStudents(data));
   }, [refresh]);
+
   return (
     <div className="StudentsList">
       {students.map((student) => {
@@ -26,7 +27,15 @@ const StudentsList = () => {
             house={student.house}
             alive={student.alive}
             hogwartsStudent={student.hogwartsStudent}
+            id={student.id}
+            favorite={student.favorite}
+            refresh={refresh}
             setRefresh={setRefresh}
+            student={student}
+            gender={student.gender}
+            eyeColour={student.eyeColour}
+            hairColour={student.hairColour}
+            dateOfBirth={student.dateOfBirth}
           />
         )
       })}
@@ -35,6 +44,6 @@ const StudentsList = () => {
 
 };
 StudentsList.defaultProps = {
-  pokemons: Array(10).fill(''),
+  students: Array(10).fill(''),
 }
 export default StudentsList;
