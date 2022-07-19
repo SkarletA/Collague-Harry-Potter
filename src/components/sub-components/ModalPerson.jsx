@@ -57,7 +57,6 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
         .catch((err) => console.log(err));
       }
     };
-    console.log(data);
 
   const handleClick = async (e) => {
     e.preventDefault();

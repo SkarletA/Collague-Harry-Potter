@@ -94,7 +94,7 @@
       "actor": "Tom Felton",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/draco.jpg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "5d67ac60-df50-43b1-8355-037d7b2fb4a0",
@@ -312,7 +312,7 @@
       "actor": "Alan Rickman",
       "alive": false,
       "image": "http://hp-api.herokuapp.com/images/snape.jpg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "d677cb99-2c1f-41a2-b762-08cbada5c98c",
@@ -336,7 +336,7 @@
       "actor": "Robbie Coltrane",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/hagrid.png",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": "7f13bf8c-37cf-4818-8762-b7315ad625ee",
@@ -1259,6 +1259,30 @@
       "favorite": false
     },
     {
+      "id": "487eb2a2-3ad2-434c-86f6-b1545d6a2fe1",
+      "name": "Severus Snape",
+      "species": "human",
+      "gender": "male",
+      "house": "Slytherin",
+      "dateOfBirth": "09-01-1960",
+      "yearOfBirth": 1960,
+      "ancestry": "half-blood",
+      "eyeColour": "black",
+      "hairColour": "black",
+      "wand": {
+        "wood": "",
+        "core": "",
+        "length": ""
+      },
+      "patronus": "doe",
+      "hogwartsStudent": false,
+      "hogwartsStaff": true,
+      "actor": "Alan Rickman",
+      "alive": false,
+      "image": "http://hp-api.herokuapp.com/images/snape.jpg",
+      "favorite": false
+    },
+    {
       "id": "933e085d-0441-426a-8dbb-dec7ba7f1d61",
       "name": "Hermione Granger",
       "species": "human",
@@ -1283,27 +1307,27 @@
       "favorite": false
     },
     {
-      "id": "d677cb99-2c1f-41a2-b762-08cbada5c98c",
-      "name": "Rubeus Hagrid",
-      "species": "half-giant",
+      "id": "6356f201-f15c-4f2f-ac18-0d2fd4093370",
+      "name": "Draco Malfoy",
+      "species": "human",
       "gender": "male",
-      "house": "Gryffindor",
-      "dateOfBirth": "06-12-1928",
-      "yearOfBirth": 1928,
-      "ancestry": "half-blood",
-      "eyeColour": "black",
-      "hairColour": "black",
+      "house": "Slytherin",
+      "dateOfBirth": "05-06-1980",
+      "yearOfBirth": 1980,
+      "ancestry": "pure-blood",
+      "eyeColour": "grey",
+      "hairColour": "blonde",
       "wand": {
-        "wood": "oak",
-        "core": "",
-        "length": 16
+        "wood": "hawthorn",
+        "core": "unicorn tail-hair",
+        "length": 10
       },
       "patronus": "",
-      "hogwartsStudent": false,
-      "hogwartsStaff": true,
-      "actor": "Robbie Coltrane",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "actor": "Tom Felton",
       "alive": true,
-      "image": "http://hp-api.herokuapp.com/images/hagrid.png",
+      "image": "http://hp-api.herokuapp.com/images/draco.jpg",
       "favorite": false
     }
   ]
