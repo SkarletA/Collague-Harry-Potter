@@ -45,8 +45,8 @@ const ButtonFavorite = ({ refreshData, setRefreshData }) => {
           >
           {listFavorite.map((personFavorite) => {
           return (
-            <ul >
-                <li key={personFavorite.id}>
+            <ul key={personFavorite.id}>
+                <li >
                   <div><img className="img_person" src={personFavorite.image} alt="img_person" />
                     <span>{personFavorite.name}</span>
                     <button className="btn_delete" type="submit" onClick={() => handleClickDelete(personFavorite.id, personFavorite)}>

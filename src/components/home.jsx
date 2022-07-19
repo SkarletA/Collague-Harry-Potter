@@ -10,13 +10,13 @@ import { Outlet } from "react-router-dom";
 
 const Home = () => {
   return (
-    <section className="App">
+    <section className="app">
       <NavBar />
-      <div className="App__image-principal">
+      <div className="app__image-principal">
         <img src='https://svgshare.com/i/jAf.svg' alt='title-harry-potter' />
-        <p className="App__select-filter">Selecciona tu filtro</p>
+        <p className="app__select-filter">Selecciona tu filtro</p>
       </div>
-      <section className="App__btns">
+      <section className="app__btns">
         <ButtonStudents />
         <ButtonStaffs />
       </section>

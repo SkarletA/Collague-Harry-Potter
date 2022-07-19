@@ -9,6 +9,7 @@
   position: fixed;
   right: -10px;
   top: -10px;
+  z-index: 999999999;
 }
 
 .popup {
@@ -17,10 +18,13 @@
   width: 300px;
   height: 540px;
   position: relative;
+  z-index: 999999999999;
 
   @media (min-width: 767px) {
     width: 727px;
     height: 596px;
+    position: absolute;
+    z-index: 9999999999;
   }
 
   &__btnClose {
@@ -47,20 +51,30 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   margin-left: 1.5em;
+  margin-right: 1.5em;
+  position: relative;
+    z-index: 999999999;
 
   &__container {
     width: 250px;
+    position: relative;
+    z-index: 999999999;
 
     div {
       @media (min-width: 767px) {
-        width: 320px;
+        position: relative;
+        z-index: 99999999;
       }
     }
 
     @media (min-width: 767px) {
-      width: 750px;
+      width: 100%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      position: relative;
+      gap: 10px 20px;
+      z-index: 999999999;
+      
     }
   }
 
@@ -68,15 +82,21 @@
     color: #000000;
     font-size: 24px;
     margin-bottom: 10px;
+    position: relative;
+    z-index: 999999999;
   }
 
   label {
     color: #263238;
     font-size: 10px;
     margin-bottom: 3px;
+    position: relative;
+    z-index: 999999999;
 
     @media (min-width: 767px) {
       font-size: 14px;
+      position: relative;
+      z-index: 999999999;
     }
   }
 
@@ -85,7 +105,7 @@
   .formAddPerson__skinColor,
   .formAddPerson__eyeColor {
     height: 40px;
-    width: 250px;
+    width: 100%;
     background:rgb(38,50,56, 0.06);
     border-radius: 5.33333px 5.33333px 0px 0px;
     cursor: pointer;
@@ -93,17 +113,25 @@
     border-bottom: 1px solid #000000;
     margin-bottom: 4px;
     color: #000000;
+    position: relative;
+    z-index: 999999999;
     @media (min-width: 767px) {
       height: 73px;
-      width: 270px;
       display: flex;
+      position: relative;
+      z-index: 999999999;
+      padding: 5px;
     }
   }
 
   .input__genero {
     display: flex;
+    position: relative;
+    z-index: 999999999;
     label {
       margin: 5px;
+      position: relative;
+      z-index: 999999999;
     }
     &hover {
       background: #0E4DA4;
@@ -112,8 +140,12 @@
 
   .input__position {
     display: flex;
+    position: relative;
+    z-index: 999999999;
     label {
       margin: 5px;
+      position: relative;
+      z-index: 999999999;
     }
     &hover {
       background: #0E4DA4;
@@ -129,6 +161,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    position: relative;
+    z-index: 999999999;
   }
 }
 
@@ -142,6 +176,8 @@
   border: 4px solid #6B63B5;
   margin-left: 5em ;
   margin-top: 1em;
+  position: relative;
+  z-index: 999999999;
 
   &:hover {
     background-color: rgba(107, 99, 181, 0.6);
@@ -155,5 +191,7 @@
     margin-left: 15em ;
     width: 288px;
     height: 67px;
+    position: relative;
+    z-index: 999999999;
   }
 }

@@ -10,6 +10,12 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
 
   const refresh = () => setRefreshData(!refreshData);
 
+  const fileInput = async (e) => {
+    const files = e;
+    console.log(files)
+
+  }
+
   const handleChange = (e) => {
     let { name, value } = e.target;
     if (name === 'ocupation' ) {
@@ -160,7 +166,10 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
             </div>
           </div>
           <label>FOTOGRAFIA</label>
-          <input type="file" name="image" onChange={handleChange}/>
+          <input type="file" name="image" onChange={(e) => {
+            handleChange(e);
+            fileInput(e);
+          }}/>
         </form>
         <button className="save" type="submit" onClick={handleClick}>GUARDAR</button>
       </div>

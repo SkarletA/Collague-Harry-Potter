@@ -7,13 +7,21 @@
   height: 40px;
   top: 95%;
   left: 50px;
+  z-index: 4;
 
-  @media (min-width: 767px) {
+  @media (min-width: 767px) and (max-width: 1024px) {
     font-size: 36px;
     position: fixed;
     top:0;
     bottom: 0;
     left: 60%;
+  }
+  @media (min-width: 1024px) {
+    font-size: 36px;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 80%;
   }
 
 }

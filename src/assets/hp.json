@@ -457,6 +457,14 @@
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/filch.jpg",
       "favorite": false
+    },
+    {
+      "name": "Skarlet Araque",
+      "image": "C:\\fakepath\\image 1.svg",
+      "id": "8d717eb6-b549-4363-8210-56a0ed9c1126",
+      "alive": true,
+      "favorite": false,
+      "hogwartsStaff": false
     }
   ],
   "gryffindor": [

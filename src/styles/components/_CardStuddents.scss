@@ -12,6 +12,7 @@
     height: 50px;
     @media (min-width: 767px) and (max-width: 1024px) {
       position: relative;
+      z-index: 1;
       top: 3em;
       margin-block-start: 0em;
       margin-block-end: 0em;
@@ -20,6 +21,7 @@
     }
     @media (min-width: 1024px) {
       position: relative;
+      z-index: 1;
       text-align: center;
       font-size: 28px;
       top: 1.7em;
@@ -61,6 +63,7 @@
     height: 50px;
     @media (min-width: 767px) and (max-width: 1024px) {
       position: relative;
+      z-index: 1;
       margin-block-start: 0em;
       margin-block-end: 0em;
       height: 50px;
@@ -69,6 +72,7 @@
     @media (min-width: 1024px) {
       display: flex;
       position: relative;
+      z-index: 1;
       text-align: center;
       font-size: 27px;
       left: 3em;
@@ -183,6 +187,7 @@
         flex-direction: row;
         justify-content: space-evenly;
         position: relative;
+        z-index: 1;
         bottom: 5em;
         right: 3em;
         padding-right: 2px;
@@ -191,6 +196,7 @@
         flex-direction: row;
         justify-content: space-evenly;
         position: relative;
+        z-index: 1;
         bottom: 6em;
         right: 3em;
         padding-right: 2px;
@@ -205,6 +211,7 @@
         flex-direction: row;
         justify-content: space-evenly;
         position: relative;
+        z-index: 1;
         bottom: 5em;
         right: 1em;
         padding-right: 2px;
@@ -213,6 +220,7 @@
         flex-direction: row;
         justify-content: space-evenly;
         position: relative;
+        z-index: 1;
         bottom: 6em;
         right: 3em;
         padding-right: 2px;
@@ -227,6 +235,7 @@
     color: black;
     @media (min-width: 767px) and (max-width: 1024px) {
       position: relative;
+      z-index: 1;
       margin-left: 2px;
     }
     @media (min-width: 1024px) {
@@ -238,9 +247,11 @@
     color: black;
     @media (min-width: 767px) and (max-width: 1024px) {
       position: relative;
+      z-index: 1;
     }
     @media (min-width: 1024px) {
       position: relative;
+      z-index: 1;
     }
   }
   .split {
@@ -249,12 +260,14 @@
     @media (min-width: 767px) and (max-width: 1024px) {
       display: inline-block;
       position: relative;
+      z-index: 1;
       margin-left: 2px;
     }
 
     @media (min-width: 1024px) {
       display: inline-block;
       position: relative;
+      z-index: 1;
       margin-left: 2px;
     }
   }
@@ -267,6 +280,7 @@
         width: 130px;
         color: #000000;
         position: relative;
+        z-index: 1;
         top: 105px;
         right: 5px;
       }
@@ -277,6 +291,7 @@
         width: 210px;
         color: #000000;
         position: relative;
+        z-index: 1;
         top: 130px;
         right: 45px;
       }
