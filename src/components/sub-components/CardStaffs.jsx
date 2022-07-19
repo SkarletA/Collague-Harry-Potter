@@ -16,7 +16,11 @@ const CardStaffs = (
     id,
     staff,
     refreshData,
-    setRefreshData
+    setRefreshData,
+    gender,
+    eyeColour,
+    hairColour,
+    dateOfBirth
   }) => {
 
     const refresh = () => setRefreshData(!refreshData);
@@ -64,12 +68,20 @@ const CardStaffs = (
       ?
         (<p className="cardStaffs__name_staffs">{name}</p>)
       :
-        (<p className="cardStaffs__name_staffs">+ {name}</p>)
+        (<p className="cardStaffsDead__name_staffs__finado">+ {name}</p>)
     }
     <div className="info_staffs">
       <div className="info">
-        <p className="info_staffs__live_status">{alive ? "VIVO": "FINADO"}</p>
-        {hogwartsStaff ? <p className="info_staffs__grado">STAFF</p>: ''}
+        <div className="info__general">
+          <span>Cumpleaños: {dateOfBirth} </span>
+          <span>Género: {gender} </span>
+          <span>Color de ojos: {eyeColour} </span>
+          <span>Color de pelo: {hairColour} </span>
+        </div>
+        <div className={`info_staffs__general__${alive ? "VIVO": "FINADO"}`}>
+          <p className="info_staffs__live_status">{alive ? "VIVO": "FINADO"}</p>
+          {hogwartsStaff ? <p className="info_staffs__grado">STAFF</p>: ''}
+        </div>
       </div>
       <button className={`btn_favorite_staffs__${live}`} onClick={handleOnFavorite}>
         { favorite

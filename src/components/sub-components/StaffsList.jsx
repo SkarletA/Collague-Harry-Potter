@@ -29,6 +29,10 @@ const StaffsList = () => {
             id={staff.id}
             refreshData={refreshData}
             setRefreshData={setRefreshData}
+            gender={staff.gender}
+            eyeColour={staff.eyeColour}
+            hairColour={staff.hairColour}
+            dateOfBirth={staff.dateOfBirth}
           />
         )
       })}

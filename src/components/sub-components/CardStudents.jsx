@@ -58,7 +58,6 @@ const CardStudents = ({
   }
   const live = alive ? 'cardStudents' : 'cardStudentsDead';
 
-  console.log(favorite);
 
   return (
   <section className={live}>
