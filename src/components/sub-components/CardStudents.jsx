@@ -15,7 +15,11 @@ const CardStudents = ({
   id,
   student,
   refresh,
-  setRefresh
+  setRefresh,
+  gender,
+  eyeColour,
+  hairColour,
+  dateOfBirth
 }) => {
 
   const refreshData = () => setRefresh(!refresh);
@@ -65,12 +69,21 @@ const CardStudents = ({
       ?
         (<p className="cardStudents__name_students">{name}</p>)
       :
-        (<p className="cardStudents__name_students">+ {name}</p>)
+        (<p className="cardStudentsDead__name_students__finado">+ {name}</p>)
     }
     <div className="info_students">
       <div className="info">
-        <p className="info_students__live_status">{alive ? "VIVO": "FINADO"}</p>
-        {hogwartsStudent ? <p className="info_students__grado">ESTUDIANTE</p>: ''}
+        <div className="info__general">
+          <span>Cumpleaños: {dateOfBirth} </span>
+          <span>Género: {gender} </span>
+          <span>Color de ojos: {eyeColour} </span>
+          <span>Color de pelo: {hairColour} </span>
+        </div>
+        <div className={`info_students__general__${alive ? "VIVO": "FINADO"}`}>
+          <p className="info_students__live_status">{alive ? "VIVO": "FINADO"}</p>
+          <span className="split">/</span>
+          {hogwartsStudent ? <p className="info_students__grado">ESTUDIANTE</p>: ''}
+        </div>
       </div>
       <button className={`btn_favorite_students__${live}`} onClick={handleOnFavorite}>
         { favorite

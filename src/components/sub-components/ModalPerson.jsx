@@ -106,7 +106,7 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
               />
             </div>
             <div>
-              <label>COLOR DE PIEL</label>
+              <label>COLOR DE PELO</label>
               <input
                 className="formAddPerson__skinColor"
                 type="text"
