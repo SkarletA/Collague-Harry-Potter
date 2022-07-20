@@ -11,7 +11,7 @@ const StudentsList = () => {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     }
-    fetch("http://localhost:3001/students", requestOption)
+    fetch("http://localhost:3001/characters?hogwartsStudent=true", requestOption)
       .then((response) => response.json())
       .then((data) => setStudents(data));
   }, [refresh]);

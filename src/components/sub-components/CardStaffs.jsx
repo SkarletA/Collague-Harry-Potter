@@ -46,6 +46,8 @@ const CardStaffs = (
         await postFavorite(staff);
         await updateFavorite(data, id);
         refresh();
+      } else {
+        window.alert("Lista llena, por favor elimine un personaje de la lista de favoritos!!");
       }
     }
 
@@ -57,12 +59,19 @@ const CardStaffs = (
     'Hufflepuff': 'hufCssColor',
     '': 'noneCssColor',
   }
-  const live = alive ? 'cardStaffs' : 'cardStaffsDead'
+  const live = alive ? 'cardStaffs' : 'cardStaffsDead';
+  const imageDefault = {
+    "female": "https://pottertar.framiq.com/assets/examples/pottertar01.png",
+    "male": "https://cdn-icons-png.flaticon.com/512/1600/1600953.png"
+  }
 
   return (
   <section className={live}>
     <div className={`defaultColor ${houseColor[house]}`}>
-      <img className="image_staffs" src={image} alt="" />
+      {image ?
+        <img className="image_staffs" src={image} alt="character" />
+      : <img className="image_staffs" src={imageDefault[gender]} alt="character" />
+      }
     </div>
     { alive
       ?

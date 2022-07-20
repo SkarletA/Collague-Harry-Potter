@@ -94,7 +94,7 @@
       "actor": "Tom Felton",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/draco.jpg",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": "5d67ac60-df50-43b1-8355-037d7b2fb4a0",
@@ -288,7 +288,7 @@
       "actor": "Dame Maggie Smith",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/mcgonagall.jpg",
-      "favorite": true
+      "favorite": false
     },
     {
       "id": "487eb2a2-3ad2-434c-86f6-b1545d6a2fe1",
@@ -457,14 +457,6 @@
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/filch.jpg",
       "favorite": false
-    },
-    {
-      "name": "Skarlet Araque",
-      "image": "C:\\fakepath\\image 1.svg",
-      "id": "8d717eb6-b549-4363-8210-56a0ed9c1126",
-      "alive": true,
-      "favorite": false,
-      "hogwartsStaff": false
     }
   ],
   "gryffindor": [
@@ -744,7 +736,7 @@
       "actor": "Emma Watson",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/hermione.jpeg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "f11689e6-3e76-4702-ad3f-a45bef6f4542",
@@ -792,7 +784,7 @@
       "actor": "Tom Felton",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/draco.jpg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "ee10cb40-638b-4d17-a4d6-f8af65d7c153",
@@ -816,7 +808,7 @@
       "actor": "Dame Maggie Smith",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/mcgonagall.jpg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "5d67ac60-df50-43b1-8355-037d7b2fb4a0",
@@ -1032,7 +1024,7 @@
       "actor": "David Thewlis",
       "alive": false,
       "image": "http://hp-api.herokuapp.com/images/lupin.jpg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "1cb55995-a275-458a-9188-b5cb3b43a360",
@@ -1297,8 +1289,128 @@
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/filch.jpg",
       "favorite": false
+    },
+    {
+      "name": "Skarlet Araque",
+      "dateOfBirth": "26-02-1993",
+      "eyeColour": "marron",
+      "hairColour": "marron",
+      "gender": "female",
+      "hogwartsStaff": true,
+      "id": "520b6ff1-275e-48a4-99e5-a9658d0d76cf",
+      "alive": true,
+      "favorite": false,
+      "hogwartsStudent": false
+    },
+    {
+      "name": "Antoni",
+      "dateOfBirth": "07-12-1992",
+      "eyeColour": "verde",
+      "hairColour": "marron",
+      "gender": "male",
+      "hogwartsStudent": true,
+      "id": "205963b5-8794-4909-8bb1-e8cf7397a2cb",
+      "alive": true,
+      "favorite": false,
+      "hogwartsStaff": false
     }
   ],
   "favorites": [
+    {
+      "id": "ee10cb40-638b-4d17-a4d6-f8af65d7c153",
+      "name": "Minerva McGonagall",
+      "species": "human",
+      "gender": "female",
+      "house": "Gryffindor",
+      "dateOfBirth": "04-10-1925",
+      "yearOfBirth": 1925,
+      "ancestry": "",
+      "eyeColour": "",
+      "hairColour": "black",
+      "wand": {
+        "wood": "",
+        "core": "",
+        "length": ""
+      },
+      "patronus": "tabby cat",
+      "hogwartsStudent": false,
+      "hogwartsStaff": true,
+      "actor": "Dame Maggie Smith",
+      "alive": true,
+      "image": "http://hp-api.herokuapp.com/images/mcgonagall.jpg",
+      "favorite": false
+    },
+    {
+      "id": "7f13bf8c-37cf-4818-8762-b7315ad625ee",
+      "name": "Remus Lupin",
+      "species": "werewolf",
+      "gender": "male",
+      "house": "Gryffindor",
+      "dateOfBirth": "10-03-1960",
+      "yearOfBirth": 1960,
+      "ancestry": "half-blood",
+      "eyeColour": "green",
+      "hairColour": "brown",
+      "wand": {
+        "wood": "cypress",
+        "core": "unicorn tail-hair",
+        "length": 10.25
+      },
+      "patronus": "wolf",
+      "hogwartsStudent": false,
+      "hogwartsStaff": true,
+      "actor": "David Thewlis",
+      "alive": false,
+      "image": "http://hp-api.herokuapp.com/images/lupin.jpg",
+      "favorite": false
+    },
+    {
+      "id": "6356f201-f15c-4f2f-ac18-0d2fd4093370",
+      "name": "Draco Malfoy",
+      "species": "human",
+      "gender": "male",
+      "house": "Slytherin",
+      "dateOfBirth": "05-06-1980",
+      "yearOfBirth": 1980,
+      "ancestry": "pure-blood",
+      "eyeColour": "grey",
+      "hairColour": "blonde",
+      "wand": {
+        "wood": "hawthorn",
+        "core": "unicorn tail-hair",
+        "length": 10
+      },
+      "patronus": "",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "actor": "Tom Felton",
+      "alive": true,
+      "image": "http://hp-api.herokuapp.com/images/draco.jpg",
+      "favorite": false
+    },
+    {
+      "id": "933e085d-0441-426a-8dbb-dec7ba7f1d61",
+      "name": "Hermione Granger",
+      "species": "human",
+      "gender": "female",
+      "house": "Gryffindor",
+      "dateOfBirth": "19-09-1979",
+      "yearOfBirth": 1979,
+      "ancestry": "muggleborn",
+      "eyeColour": "brown",
+      "hairColour": "brown",
+      "wand": {
+        "wood": "vine",
+        "core": "dragon heartstring",
+        "length": ""
+      },
+      "patronus": "otter",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "actor": "Emma Watson",
+      "alive": true,
+      "image": "http://hp-api.herokuapp.com/images/hermione.jpeg",
+      "favorite": false
+    }
   ]
 }

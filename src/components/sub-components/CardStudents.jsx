@@ -45,6 +45,8 @@ const CardStudents = ({
         await postFavorite(student);
         await updateFavorite(data, id);
         refreshData();
+      } else {
+        window.alert("Lista llena, por favor elimine un personaje de la lista de favoritos!!");
       }
     }
   }
@@ -58,11 +60,18 @@ const CardStudents = ({
   }
   const live = alive ? 'cardStudents' : 'cardStudentsDead';
 
+  const imageDefault = {
+    "female": "https://pottertar.framiq.com/assets/examples/pottertar01.png",
+    "male": "https://cdn-icons-png.flaticon.com/512/1600/1600953.png"
+  }
+
 
   return (
   <section className={live}>
     <div className={`defaultColor ${houseColor[house]}`}>
-      <img className="image_students" src={image} alt="" />
+      {image ?
+      <img className="image_students" src={image} alt="character" />
+      : <img className="image_students" src={imageDefault[gender]} alt="default" /> }
     </div>
     { alive
       ?

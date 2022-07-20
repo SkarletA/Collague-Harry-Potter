@@ -44,6 +44,8 @@ const CardCharacters = (
           await postFavorite(character);
           await updateFavorite(data, id);
           refresh();
+        } else {
+          window.alert("Lista llena, por favor elimine un personaje de la lista de favoritos!!");
         }
       }
   

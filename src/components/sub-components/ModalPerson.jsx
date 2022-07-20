@@ -7,15 +7,16 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
 
   const [data, setData] = useState([]);
   const [refreshData, setRefreshData] = useState(false);
-  const [openModalDelete, setOpenModalDelete] = useState(false);
-
   const refresh = () => setRefreshData(!refreshData);
+  const [file, setFile] = useState(null);
 
   const fileInput = async (e) => {
-    const files = e;
-    console.log(files)
-
+    const files = setFile(e.target.files[0]);
+    // if (files.size > 1024)
+    // onFileSelectError({ error: "File size cannot exceed more than 1MB" });
+    // else onFileSelectSuccess(files);
   }
+  console.log(file);
 
   const handleChange = (e) => {
     let { name, value } = e.target;
@@ -47,7 +48,7 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
       body: JSON.stringify(aux),
     }
     if (localData.hogwartsStudent === true) {
-      fetch("http://localhost:3001/students", requestOption)
+      fetch("http://localhost:3001/characters?hogwartsStudent=true", requestOption)
         .then((response) => {
           response.json();
           refresh();
@@ -55,7 +56,7 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
         .then(() => navigate("/students"))
         .catch((err) => console.log(err));
     } else {
-      fetch("http://localhost:3001/staffs", requestOption)
+      fetch("http://localhost:3001/characters?hogwartsStaff=true", requestOption)
         .then((response) => {
           response.json();
           refresh();

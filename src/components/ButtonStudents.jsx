@@ -11,7 +11,10 @@ const ButtonStudents = ({ isActive, setIsActive }) => {
     if (isActive.activeStudent) {
       setIsActive(isActive.activeStudent = false);
     } else {
-      setIsActive(isActive.activeStudent = false)
+      setIsActive(isActive = {
+        activeStaff: false,
+        activeStudent: true
+      })
     }
     ;
   };
