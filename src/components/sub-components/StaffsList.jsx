@@ -9,7 +9,7 @@ const StaffsList = () => {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     }
-    fetch("http://localhost:3001/characters?hogwartsStaff=true", requestOption)
+    fetch("https://62d7a78b2d20e504f385950a--melodious-hamster-29bc02.netlify.app/characters?hogwartsStaff=true", requestOption)
       .then((response) => response.json())
       .then((data) => setStaffs(data));
   }, [refreshData]);
