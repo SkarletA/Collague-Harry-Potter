@@ -1,6 +1,6 @@
 export const updateFavorite = (data, id) => {
   const updateRequest = {
-    method: 'PATCH',
+    method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data),
   }
