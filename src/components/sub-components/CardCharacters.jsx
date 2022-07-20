@@ -58,10 +58,18 @@ const CardCharacters = (
       '': 'noneCssColor',
     }
     const live = alive ? 'cardCharacters' : 'cardCharactersDead'
+    
+    const imageDefault = {
+      "female": "https://pottertar.framiq.com/assets/examples/pottertar01.png",
+      "male": "https://cdn-icons-png.flaticon.com/512/1600/1600953.png"
+    }
     return (
     <section className={live}>
       <div className={`defaultColor ${houseColor[house]}`}>
-        <img className="image_character" src={image} alt="" />
+        {image ?
+          (<img className="image_character" src={image} alt="img-character" />)
+        :
+          (<img className="image_character" src={imageDefault} alt="img-default" />)}
       </div>
       { alive
         ?

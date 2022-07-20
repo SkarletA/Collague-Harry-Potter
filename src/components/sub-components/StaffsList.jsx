@@ -9,7 +9,7 @@ const StaffsList = () => {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     }
-    fetch("http://localhost:3001/characters?hogwartsStaff=true", requestOption)
+    fetch("https://62d80e029c8b5185c781fe4a.mockapi.io/characters?hogwartsStaff=true", requestOption)
       .then((response) => response.json())
       .then((data) => setStaffs(data));
   }, [refreshData]);
@@ -41,6 +41,6 @@ const StaffsList = () => {
 
 };
 StaffsList.defaultProps = {
-  pokemons: Array(10).fill(''),
+  staffs: Array(10).fill(''),
 }
 export default StaffsList;
