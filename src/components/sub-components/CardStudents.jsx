@@ -2,7 +2,7 @@ import React from "react";
 import { connect} from "react-redux";
 import { setFavorite } from "../../actions";
 import { deleteFavorite, getFavorite, postFavorite } from "../../api/requestFavorite";
-import { updateStudents } from "../../api/requestStudents";
+import { updateFavorite } from "../../api/requestCharacters";
 import '../../styles/styles.scss';
 
 const CardStudents = ({
@@ -37,13 +37,13 @@ const CardStudents = ({
 
     if (favorite) {
       await deleteFavorite(id);
-      await updateStudents(data, id);
+      await updateFavorite(data, id);
       refreshData();
 
     } else {
       if (favoriteList.length < 5) {
         await postFavorite(student);
-        await updateStudents(data, id);
+        await updateFavorite(data, id);
         refreshData();
       }
     }

@@ -2,10 +2,20 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 
-const ButtonStaffs = () => {
+const ButtonStaffs = ({ isActive, setIsActive }) => {
   const navigate = useNavigate();
   const handleClickStaffs = () => {
-    return (navigate('/staffs'));
+    navigate('/staffs');
+    if (isActive.activeStaff) {
+      setIsActive(isActive.activeStaff = false);
+    } else {
+      setIsActive(
+        isActive = {
+          activeStaff: true,
+          activeStudent: false
+        }
+      );
+    }
   }
   return(
     <section className="btn_staffs_container">

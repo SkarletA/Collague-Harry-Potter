@@ -17,7 +17,7 @@ const StudentsList = () => {
   }, [refresh]);
 
   return (
-    <div className="StudentsList">
+    <div className="studentsList">
       {students.map((student) => {
         return (
           <CardStudents

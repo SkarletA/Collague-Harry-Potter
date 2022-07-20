@@ -7,6 +7,7 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
 
   const [data, setData] = useState([]);
   const [refreshData, setRefreshData] = useState(false);
+  const [openModalDelete, setOpenModalDelete] = useState(false);
 
   const refresh = () => setRefreshData(!refreshData);
 

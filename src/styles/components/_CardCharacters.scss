@@ -1,0 +1,323 @@
+.cardCharacters {
+  background-color: #ffffff;
+  width: 140px;
+  height: 181px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  &__name_character {
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    height: 50px;
+    @media (min-width: 767px) and (max-width: 1024px) {
+      position: relative;
+      top: 3em;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      height: 50px;
+      width: 200px;
+    }
+    @media (min-width: 1024px) {
+      position: relative;
+      text-align: center;
+      font-size: 28px;
+      top: 1.7em;
+      left: 3em;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      height: 50px;
+      width: 100px;
+      display: flex;
+      justify-content: space-around;
+      bottom: 0;
+    }
+  }
+  @media (min-width: 767px) and (max-width: 1024px) {
+    width: 300px;
+    height: 200px;
+    flex-direction: row;
+  }
+  @media (min-width: 1024px) {
+    width: 510px;
+    height: 290px;
+    flex-direction: row;
+    border-radius: 20px;
+  }
+}
+
+.cardCharactersDead {
+  background-color: #CCCCCC;
+  width: 140px;
+  height: 181px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  &__name_character__finado {
+    color: black;
+    text-align: center;
+    font-size: 18px;
+    height: 50px;
+    @media (min-width: 767px) and (max-width: 1024px) {
+      position: relative;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      height: 50px;
+      top: 3em;
+    }
+    @media (min-width: 1024px) {
+      display: flex;
+      position: relative;
+      text-align: center;
+      font-size: 27px;
+      left: 3em;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      height: 30px;
+      width: 100px;
+      justify-content: space-around;
+      top:1em;
+    }
+  }
+  @media (min-width: 767px) and (max-width: 1024px) {
+    width: 300px;
+    height: 200px;
+    flex-direction: row;
+  }
+
+  @media (min-width: 1024px) {
+    width: 510px;
+    height: 290px;
+    flex-direction: row;
+    border-radius: 20px;
+  }
+}
+
+.gryCssColor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(358.61deg, #FF0000 4.67%, #FED482 96.97%);
+}
+
+.slyCssColor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(135deg, #1C792B 0%, #82E95E 100%);
+}
+.ravCssColor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(135deg, #0597B7 0%, #66D1FF 100%);
+}
+
+.hufCssColor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(135deg, #FFC700 0%, #FFF388 100%);
+}
+
+.noneCssColor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(135deg, #716f69 0%, #c7c5b9 100%);
+}
+
+.image_character {
+  width: 69px;
+  height: 69px;
+  border-radius: 50%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  @media (min-width: 767px) and (max-width: 1024px) {
+    width: 80px;
+    height: 80px;
+  }
+  @media (min-width: 1024px) {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.info_characters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 0.5em;
+  font-size: 11px;
+
+  @media (min-width: 767px) and (max-width: 1024px) {
+    justify-content: flex-end;
+    width: 20%;
+  }
+
+  &__general__VIVO {
+    display: flex;
+    flex-direction: column;
+      @media (min-width: 767px) and (max-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+        bottom: 5em;
+        right: 3em;
+        padding-right: 2px;
+      }
+      @media (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+        bottom: 6em;
+        right: 3em;
+        padding-right: 2px;
+        font-size: 15px;
+      }
+    }
+
+    &__general__FINADO {
+      display: flex;
+      flex-direction: column;
+      @media (min-width: 767px) and (max-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+        bottom: 5em;
+        right: 1em;
+        padding-right: 2px;
+      }
+      @media (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+        bottom: 6em;
+        right: 3em;
+        padding-right: 2px;
+        font-size: 15px;
+      }
+  }
+  img {
+    width: 20px;
+    height: 22px;
+  }
+  &__grado {
+    color: black;
+    @media (min-width: 767px) and (max-width: 1024px) {
+      position: relative;
+      margin-left: 2px;
+    }
+    @media (min-width: 1024px) {
+      position: relative;
+      margin-left: 2px;
+    }
+  }
+  &__live_status {
+    color: black;
+    @media (min-width: 767px) and (max-width: 1024px) {
+      position: relative;
+    }
+    @media (min-width: 1024px) {
+      position: relative;
+    }
+  }
+  .split {
+    display: none;
+    color: #000000;
+    @media (min-width: 767px) and (max-width: 1024px) {
+      display: inline-block;
+      position: relative;
+      margin-left: 2px;
+    }
+
+    @media (min-width: 1024px) {
+      display: inline-block;
+      position: relative;
+      margin-left: 2px;
+    }
+  }
+  .info__general {
+    span {
+      display: none;
+      @media (min-width: 767px) and (max-width: 1024px) {
+        display: flex;
+        width: 130px;
+        color: #000000;
+        position: relative;
+        top: 105px;
+        right: 5px;
+      }
+  
+      @media (min-width: 1024px) {
+        font-size: 18px;
+        display: flex;
+        width: 210px;
+        color: #000000;
+        position: relative;
+        top: 130px;
+        right: 45px;
+      }
+    }
+  }
+}
+
+.btn_favorite_characters {
+  width: 20px;
+  height: 20px;
+
+  &__cardCharacters {
+    background-color: white;
+    border: none;
+
+    @media (min-width: 767px) and (max-width: 1024px) {
+      margin-bottom: 12em;
+      margin-right: 1em;
+    }
+    @media (min-width: 1024px) {
+      margin-bottom: 18em;
+      margin-right: 1em;
+    }
+  }
+  &__cardCharactersDead {
+    background-color: #CCCCCC;
+    border: none;
+    @media (min-width: 767px) and (max-width: 1024px){
+      margin-bottom: 12em;
+      margin-right: 1em;
+    }
+    @media (min-width: 1024px) {
+      margin-bottom: 18em;
+      margin-right: 1em;
+    }
+  }
+}
+
+.defaultColor.gryCssColor,
+.defaultColor.hufCssColor,
+.defaultColor,
+.defaultColor.ravCssColor,
+.defaultColor.slyCssColor,
+.defaultColor.noneCssColor {
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 120px;
+    border-radius: 10px 0 0 10px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 280px;
+    border-radius: 20px 0 0  20px;
+  }
+}

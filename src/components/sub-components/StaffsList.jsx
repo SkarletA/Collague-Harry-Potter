@@ -14,7 +14,7 @@ const StaffsList = () => {
       .then((data) => setStaffs(data));
   }, [refreshData]);
   return (
-    <div className="StaffsList">
+    <div className="staffsList">
       {Staffs.map((staff) => {
         return (
           <CardStaffs

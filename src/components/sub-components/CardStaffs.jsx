@@ -3,7 +3,7 @@ import { connect} from "react-redux";
 import { deleteFavorite, getFavorite, postFavorite } from "../../api/requestFavorite";
 import { setFavorite } from "../../actions";
 import '../../styles/styles.scss';
-import { updateStaffs } from "../../api/requestStaffs";
+import { updateFavorite } from "../../api/requestCharacters";
 
 const CardStaffs = (
   {
@@ -39,12 +39,12 @@ const CardStaffs = (
 
     if (favorite) {
       await deleteFavorite(id);
-      await updateStaffs(data, id);
+      await updateFavorite(data, id);
       refresh();
     } else {
       if (favoriteList.length < 5) {
         await postFavorite(staff);
-        await updateStaffs(data, id);
+        await updateFavorite(data, id);
         refresh();
       }
     }
@@ -80,6 +80,7 @@ const CardStaffs = (
         </div>
         <div className={`info_staffs__general__${alive ? "VIVO": "FINADO"}`}>
           <p className="info_staffs__live_status">{alive ? "VIVO": "FINADO"}</p>
+          <span className="split">/</span>
           {hogwartsStaff ? <p className="info_staffs__grado">STAFF</p>: ''}
         </div>
       </div>
