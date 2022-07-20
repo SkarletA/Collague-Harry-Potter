@@ -17,7 +17,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start & npm run server",
     "server": "json-server --watch src/assets/hp.json --port 3001",
     "build": "react-scripts build",
     "test": "react-scripts test",

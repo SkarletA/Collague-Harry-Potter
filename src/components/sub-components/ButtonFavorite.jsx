@@ -3,6 +3,7 @@ import { deleteFavorite, getFavorite } from "../../api/requestFavorite";
 //import { updateStaffs } from "../../api/requestStaffs";
 
 import { updateFavorite } from "../../api/requestCharacters";
+import { ModalDelete } from "./ModalDelete";
 //import { setFavorite } from "../../actions";
 // import { useNavigate } from "react-router-dom";
 //import IconFavorite from "https://svgshare.com/i/jAg.svg";
@@ -11,6 +12,8 @@ import { updateFavorite } from "../../api/requestCharacters";
 const ButtonFavorite = ({ refreshData, setRefreshData }) => {
   const [menu, setMenu] = useState(false);
   const [listFavorite, setListFavorite] = useState([]);
+  const [openModalDelete, setOpenModalDelete] = useState(false);
+  const [current, setCurrent] = useState('');
 
   const refresh = () => setRefreshData(!refreshData);
 
@@ -19,21 +22,8 @@ const ButtonFavorite = ({ refreshData, setRefreshData }) => {
     const getListFavorite = await getFavorite();
     setListFavorite(getListFavorite);
     refresh();
-    console.log(getListFavorite);
   }
 
-  const handleClickDelete = async(id, data) => {
-    await deleteFavorite(id);
-    await updateFavorite(data, id);
-    refresh();
-    // if (data.hogwartsStaff) {
-    //   await updateFavorite(data, id);
-    //   refresh();
-    // } else {
-    //   await updateFavorite(data, id);
-    //   refresh();
-    // }
-  }
 
   return (
     <div className="container_favorite">
@@ -50,7 +40,10 @@ const ButtonFavorite = ({ refreshData, setRefreshData }) => {
                 <li >
                   <div><img className="img_person" src={personFavorite.image} alt="img_person" />
                     <span>{personFavorite.name}</span>
-                    <button className="btn_delete" type="submit" onClick={() => handleClickDelete(personFavorite.id, personFavorite)}>
+                    <button className="btn_delete" type="submit" onClick={() => {
+                      setCurrent(personFavorite);
+                      setOpenModalDelete(!openModalDelete);
+                    }}>
                       <img src="https://svgshare.com/i/jC8.svg" alt="icon_delete" />
                     </button>
                   </div>
@@ -59,6 +52,13 @@ const ButtonFavorite = ({ refreshData, setRefreshData }) => {
         )
       })}
       </nav>
+      <ModalDelete
+        openModalDelete={openModalDelete}
+        closeModalDelete={() => setOpenModalDelete(false)}
+        current={current}
+        refresh={refreshData}
+        setRefresh={setRefreshData}
+      />
     </div>
 
   );
