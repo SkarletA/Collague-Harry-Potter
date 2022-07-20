@@ -74,7 +74,7 @@ Intrucciones para cargar la pagina:
 
 ## Despliegue netlify
   - ir a la siguiente url:
-  [_netlify_](https://verdant-fudge-27531d.netlify.app/)
+  [_netlify_](https://melodious-hamster-29bc02.netlify.app/)
 
  Nota: para en el despliegue no se visualiza la imagen de fondo para vista tablet y desktop
 
