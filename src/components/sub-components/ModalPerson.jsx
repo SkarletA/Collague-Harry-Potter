@@ -48,7 +48,7 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
       body: JSON.stringify(aux),
     }
     if (localData.hogwartsStudent === true) {
-      fetch("http://localhost:3001/characters?hogwartsStudent=true", requestOption)
+      fetch("https://62d80e029c8b5185c781fe4a.mockapi.io/characters?hogwartsStudent=true", requestOption)
         .then((response) => {
           response.json();
           refresh();
@@ -56,7 +56,7 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
         .then(() => navigate("/students"))
         .catch((err) => console.log(err));
     } else {
-      fetch("http://localhost:3001/characters?hogwartsStaff=true", requestOption)
+      fetch("https://62d80e029c8b5185c781fe4a.mockapi.io/characters?hogwartsStaff=true", requestOption)
         .then((response) => {
           response.json();
           refresh();

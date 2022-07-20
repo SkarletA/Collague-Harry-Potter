@@ -9,7 +9,7 @@ const CharactersList = () => {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' }
     }
-    fetch("http://localhost:3001/characters", requestOption)
+    fetch("https://62d80e029c8b5185c781fe4a.mockapi.io/characters", requestOption)
       .then((response) => response.json())
       .then((data) => setCharacters(data));
   }, [refreshData]);
@@ -41,6 +41,6 @@ const CharactersList = () => {
 
 };
 CharactersList.defaultProps = {
-  pokemons: Array(10).fill(''),
+  characters: Array(10).fill(''),
 }
 export default CharactersList;
