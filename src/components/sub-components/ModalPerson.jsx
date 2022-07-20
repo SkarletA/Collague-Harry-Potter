@@ -11,7 +11,7 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
   const [file, setFile] = useState(null);
 
   const fileInput = async (e) => {
-    const files = setFile(e.target.files[0]);
+    setFile(e.target.files[0]);
     // if (files.size > 1024)
     // onFileSelectError({ error: "File size cannot exceed more than 1MB" });
     // else onFileSelectSuccess(files);
