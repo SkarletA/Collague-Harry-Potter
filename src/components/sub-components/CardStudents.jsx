@@ -46,7 +46,7 @@ const CardStudents = ({
         await updateFavorite(data, id);
         refreshData();
       } else {
-        window.alert("Lista llena, borre una de la lista");
+        window.alert("Lista llena, por favor elimine un personaje de la lista de favoritos!!");
       }
     }
   }

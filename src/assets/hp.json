@@ -736,7 +736,7 @@
       "actor": "Emma Watson",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/hermione.jpeg",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "f11689e6-3e76-4702-ad3f-a45bef6f4542",
@@ -1386,6 +1386,30 @@
       "actor": "Tom Felton",
       "alive": true,
       "image": "http://hp-api.herokuapp.com/images/draco.jpg",
+      "favorite": false
+    },
+    {
+      "id": "933e085d-0441-426a-8dbb-dec7ba7f1d61",
+      "name": "Hermione Granger",
+      "species": "human",
+      "gender": "female",
+      "house": "Gryffindor",
+      "dateOfBirth": "19-09-1979",
+      "yearOfBirth": 1979,
+      "ancestry": "muggleborn",
+      "eyeColour": "brown",
+      "hairColour": "brown",
+      "wand": {
+        "wood": "vine",
+        "core": "dragon heartstring",
+        "length": ""
+      },
+      "patronus": "otter",
+      "hogwartsStudent": true,
+      "hogwartsStaff": false,
+      "actor": "Emma Watson",
+      "alive": true,
+      "image": "http://hp-api.herokuapp.com/images/hermione.jpeg",
       "favorite": false
     }
   ]

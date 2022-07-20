@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import { deleteFavorite, getFavorite } from "../../api/requestFavorite";
+import { getFavorite } from "../../api/requestFavorite";
 //import { updateStaffs } from "../../api/requestStaffs";
 
-import { updateFavorite } from "../../api/requestCharacters";
+//import { updateFavorite } from "../../api/requestCharacters";
 import { ModalDelete } from "./ModalDelete";
 //import { setFavorite } from "../../actions";
 // import { useNavigate } from "react-router-dom";
