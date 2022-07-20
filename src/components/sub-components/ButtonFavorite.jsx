@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import { deleteFavorite, getFavorite } from "../../api/requestFavorite";
-import { updateStaffs } from "../../api/requestStaffs";
+//import { updateStaffs } from "../../api/requestStaffs";
 
-import { updateStudents } from "../../api/requestStudents";
+import { updateFavorite } from "../../api/requestCharacters";
 //import { setFavorite } from "../../actions";
 // import { useNavigate } from "react-router-dom";
 //import IconFavorite from "https://svgshare.com/i/jAg.svg";
@@ -24,14 +24,15 @@ const ButtonFavorite = ({ refreshData, setRefreshData }) => {
 
   const handleClickDelete = async(id, data) => {
     await deleteFavorite(id);
+    await updateFavorite(data, id);
     refresh();
-    if (data.hogwartsStaff) {
-      await updateStaffs(data, id);
-      refresh();
-    } else {
-      await updateStudents(data, id);
-      refresh();
-    }
+    // if (data.hogwartsStaff) {
+    //   await updateFavorite(data, id);
+    //   refresh();
+    // } else {
+    //   await updateFavorite(data, id);
+    //   refresh();
+    // }
   }
 
   return (
@@ -45,8 +46,8 @@ const ButtonFavorite = ({ refreshData, setRefreshData }) => {
           >
           {listFavorite.map((personFavorite) => {
           return (
-            <ul >
-                <li key={personFavorite.id}>
+            <ul key={personFavorite.id}>
+                <li >
                   <div><img className="img_person" src={personFavorite.image} alt="img_person" />
                     <span>{personFavorite.name}</span>
                     <button className="btn_delete" type="submit" onClick={() => handleClickDelete(personFavorite.id, personFavorite)}>

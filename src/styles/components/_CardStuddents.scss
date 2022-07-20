@@ -3,10 +3,49 @@
   width: 140px;
   height: 181px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
   &__name_students {
     color: black;
     text-align: center;
     font-size: 18px;
+    height: 50px;
+    @media (min-width: 767px) and (max-width: 1024px) {
+      position: relative;
+      z-index: 1;
+      top: 3em;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      height: 50px;
+      width: 200px;
+    }
+    @media (min-width: 1024px) {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      font-size: 28px;
+      top: 1.7em;
+      left: 3em;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      height: 50px;
+      width: 100px;
+      display: flex;
+      justify-content: space-around;
+      bottom: 0;
+    }
+  }
+
+  @media (min-width: 767px) and (max-width: 1024px) {
+    width: 300px;
+    height: 200px;
+    flex-direction: row;
+  }
+  @media (min-width: 1024px) {
+    width: 510px;
+    height: 290px;
+    flex-direction: row;
+    border-radius: 20px;
   }
 }
 .cardStudentsDead {
@@ -14,10 +53,48 @@
   width: 140px;
   height: 181px;
   border-radius: 10px;
-  &__name_students {
+  display: flex;
+  flex-direction: column;
+
+  &__name_students__finado {
     color: black;
     text-align: center;
     font-size: 18px;
+    height: 50px;
+    @media (min-width: 767px) and (max-width: 1024px) {
+      position: relative;
+      z-index: 1;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      height: 50px;
+      top: 3em;
+    }
+    @media (min-width: 1024px) {
+      display: flex;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      font-size: 27px;
+      left: 3em;
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+      height: 30px;
+      width: 100px;
+      justify-content: space-around;
+      top:1em;
+    }
+  }
+  @media (min-width: 767px) and (max-width: 1024px) {
+    width: 300px;
+    height: 200px;
+    flex-direction: row;
+  }
+
+  @media (min-width: 1024px) {
+    width: 510px;
+    height: 290px;
+    flex-direction: row;
+    border-radius: 20px;
   }
 }
 .gryCssColor {
@@ -71,6 +148,9 @@
   width: 140px;
   border-radius: 10px 10px 0 0;
   background: linear-gradient(135deg, #dabbd3 0%, #951542 100%);
+  @media (min-width: 767px) and (max-width: 1024px) {
+    width: 150px;
+  }
 }
 .image_students {
   width: 69px;
@@ -78,6 +158,14 @@
   border-radius: 50%;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  @media (min-width: 767px) and (max-width: 1024px) {
+    width: 80px;
+    height: 80px;
+  }
+  @media (min-width: 1024px) {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 .info_students {
@@ -86,26 +174,177 @@
   justify-content: space-around;
   margin-top: 0.5em;
   font-size: 11px;
+
+  @media (min-width: 767px) and (max-width: 1024px) {
+    justify-content: flex-end;
+    width: 20%;
+  }
+
+  &__general__VIVO {
+    display: flex;
+    flex-direction: column;
+      @media (min-width: 767px) and (max-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+        z-index: 1;
+        bottom: 5em;
+        right: 3em;
+        padding-right: 2px;
+      }
+      @media (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+        z-index: 1;
+        bottom: 6em;
+        right: 3em;
+        padding-right: 2px;
+        font-size: 15px;
+      }
+    }
+
+    &__general__FINADO {
+      display: flex;
+      flex-direction: column;
+      @media (min-width: 767px) and (max-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+        z-index: 1;
+        bottom: 5em;
+        right: 1em;
+        padding-right: 2px;
+      }
+      @media (min-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: relative;
+        z-index: 1;
+        bottom: 6em;
+        right: 3em;
+        padding-right: 2px;
+        font-size: 15px;
+      }
+  }
   img {
     width: 20px;
     height: 22px;
   }
   &__grado {
     color: black;
+    @media (min-width: 767px) and (max-width: 1024px) {
+      position: relative;
+      z-index: 1;
+      margin-left: 2px;
+    }
+    @media (min-width: 1024px) {
+      position: relative;
+      margin-left: 2px;
+    }
   }
   &__live_status {
     color: black;
+    @media (min-width: 767px) and (max-width: 1024px) {
+      position: relative;
+      z-index: 1;
+    }
+    @media (min-width: 1024px) {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  .split {
+    display: none;
+    color: #000000;
+    @media (min-width: 767px) and (max-width: 1024px) {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      margin-left: 2px;
+    }
+
+    @media (min-width: 1024px) {
+      display: inline-block;
+      position: relative;
+      z-index: 1;
+      margin-left: 2px;
+    }
+  }
+
+  .info__general {
+    span {
+      display: none;
+      @media (min-width: 767px) and (max-width: 1024px) {
+        display: flex;
+        width: 130px;
+        color: #000000;
+        position: relative;
+        z-index: 1;
+        top: 105px;
+        right: 5px;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 18px;
+        display: flex;
+        width: 210px;
+        color: #000000;
+        position: relative;
+        z-index: 1;
+        top: 130px;
+        right: 45px;
+      }
+    }
   }
 }
 
 .btn_favorite_students {
+  width: 20px;
+  height: 20px;
 
   &__cardStudents {
     background-color: white;
     border: none;
+
+    @media (min-width: 767px) and (max-width: 1024px) {
+      margin-bottom: 12em;
+      margin-right: 1em;
+    }
+    @media (min-width: 1024px) {
+      margin-bottom: 18em;
+      margin-right: 1em;
+    }
   }
   &__cardStudentsDead {
     background-color: #CCCCCC;
     border: none;
+
+    @media (min-width: 767px) and (max-width: 1024px){
+      margin-bottom: 12em;
+      margin-right: 1em;
+    }
+    @media (min-width: 1024px) {
+      margin-bottom: 18em;
+      margin-right: 1em;
+    }
+  }
+}
+
+.defaultColor.gryCssColor,
+.defaultColor.hufCssColor,
+.defaultColor,
+.defaultColor.ravCssColor,
+.defaultColor.slyCssColor,
+.defaultColor.noneCssColor {
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 120px;
+    border-radius: 10px 0 0 10px;
+  }
+
+  @media (min-width: 1024px) {
+    width: 280px;
+    border-radius: 20px 0 0  20px;
   }
 }

@@ -1,11 +1,11 @@
-.cardStaffs {
+.cardCharacters {
   background-color: #ffffff;
   width: 140px;
   height: 181px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  &__name_staffs {
+  &__name_character {
     color: black;
     text-align: center;
     font-size: 18px;
@@ -45,7 +45,8 @@
     border-radius: 20px;
   }
 }
-.cardStaffsDead {
+
+.cardCharactersDead {
   background-color: #CCCCCC;
   width: 140px;
   height: 181px;
@@ -53,7 +54,7 @@
   display: flex;
   flex-direction: column;
 
-  &__name_staffs__finado {
+  &__name_character__finado {
     color: black;
     text-align: center;
     font-size: 18px;
@@ -92,6 +93,7 @@
     border-radius: 20px;
   }
 }
+
 .gryCssColor {
   display: flex;
   align-items: center;
@@ -136,7 +138,7 @@
   background: linear-gradient(135deg, #716f69 0%, #c7c5b9 100%);
 }
 
-.image_staffs {
+.image_character {
   width: 69px;
   height: 69px;
   border-radius: 50%;
@@ -152,7 +154,7 @@
   }
 }
 
-.info_staffs {
+.info_characters {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -271,11 +273,11 @@
   }
 }
 
-.btn_favorite_staffs {
+.btn_favorite_characters {
   width: 20px;
   height: 20px;
 
-  &__cardStaffs {
+  &__cardCharacters {
     background-color: white;
     border: none;
 
@@ -288,7 +290,7 @@
       margin-right: 1em;
     }
   }
-  &__cardStaffsDead {
+  &__cardCharactersDead {
     background-color: #CCCCCC;
     border: none;
     @media (min-width: 767px) and (max-width: 1024px){

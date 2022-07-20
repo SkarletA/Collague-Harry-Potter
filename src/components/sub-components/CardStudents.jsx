@@ -2,7 +2,7 @@ import React from "react";
 import { connect} from "react-redux";
 import { setFavorite } from "../../actions";
 import { deleteFavorite, getFavorite, postFavorite } from "../../api/requestFavorite";
-import { updateStudents } from "../../api/requestStudents";
+import { updateFavorite } from "../../api/requestCharacters";
 import '../../styles/styles.scss';
 
 const CardStudents = ({
@@ -15,7 +15,11 @@ const CardStudents = ({
   id,
   student,
   refresh,
-  setRefresh
+  setRefresh,
+  gender,
+  eyeColour,
+  hairColour,
+  dateOfBirth
 }) => {
 
   const refreshData = () => setRefresh(!refresh);
@@ -33,13 +37,13 @@ const CardStudents = ({
 
     if (favorite) {
       await deleteFavorite(id);
-      await updateStudents(data, id);
+      await updateFavorite(data, id);
       refreshData();
 
     } else {
       if (favoriteList.length < 5) {
         await postFavorite(student);
-        await updateStudents(data, id);
+        await updateFavorite(data, id);
         refreshData();
       }
     }
@@ -54,7 +58,6 @@ const CardStudents = ({
   }
   const live = alive ? 'cardStudents' : 'cardStudentsDead';
 
-  console.log(favorite);
 
   return (
   <section className={live}>
@@ -65,12 +68,21 @@ const CardStudents = ({
       ?
         (<p className="cardStudents__name_students">{name}</p>)
       :
-        (<p className="cardStudents__name_students">+ {name}</p>)
+        (<p className="cardStudentsDead__name_students__finado">+ {name}</p>)
     }
     <div className="info_students">
       <div className="info">
-        <p className="info_students__live_status">{alive ? "VIVO": "FINADO"}</p>
-        {hogwartsStudent ? <p className="info_students__grado">ESTUDIANTE</p>: ''}
+        <div className="info__general">
+          <span>Cumpleaños: {dateOfBirth} </span>
+          <span>Género: {gender} </span>
+          <span>Color de ojos: {eyeColour} </span>
+          <span>Color de pelo: {hairColour} </span>
+        </div>
+        <div className={`info_students__general__${alive ? "VIVO": "FINADO"}`}>
+          <p className="info_students__live_status">{alive ? "VIVO": "FINADO"}</p>
+          <span className="split">/</span>
+          {hogwartsStudent ? <p className="info_students__grado">ESTUDIANTE</p>: ''}
+        </div>
       </div>
       <button className={`btn_favorite_students__${live}`} onClick={handleOnFavorite}>
         { favorite

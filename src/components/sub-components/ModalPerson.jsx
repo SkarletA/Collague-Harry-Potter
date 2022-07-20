@@ -7,8 +7,15 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
 
   const [data, setData] = useState([]);
   const [refreshData, setRefreshData] = useState(false);
+  const [openModalDelete, setOpenModalDelete] = useState(false);
 
   const refresh = () => setRefreshData(!refreshData);
+
+  const fileInput = async (e) => {
+    const files = e;
+    console.log(files)
+
+  }
 
   const handleChange = (e) => {
     let { name, value } = e.target;
@@ -106,7 +113,7 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
               />
             </div>
             <div>
-              <label>COLOR DE PIEL</label>
+              <label>COLOR DE PELO</label>
               <input
                 className="formAddPerson__skinColor"
                 type="text"
@@ -160,7 +167,10 @@ const ModalPerson = ({ openModalPerson, closeModalPerson }) => {
             </div>
           </div>
           <label>FOTOGRAFIA</label>
-          <input type="file" name="image" onChange={handleChange}/>
+          <input type="file" name="image" onChange={(e) => {
+            handleChange(e);
+            fileInput(e);
+          }}/>
         </form>
         <button className="save" type="submit" onClick={handleClick}>GUARDAR</button>
       </div>

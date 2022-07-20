@@ -14,7 +14,7 @@ const StaffsList = () => {
       .then((data) => setStaffs(data));
   }, [refreshData]);
   return (
-    <div className="StaffsList">
+    <div className="staffsList">
       {Staffs.map((staff) => {
         return (
           <CardStaffs
@@ -29,6 +29,10 @@ const StaffsList = () => {
             id={staff.id}
             refreshData={refreshData}
             setRefreshData={setRefreshData}
+            gender={staff.gender}
+            eyeColour={staff.eyeColour}
+            hairColour={staff.hairColour}
+            dateOfBirth={staff.dateOfBirth}
           />
         )
       })}
