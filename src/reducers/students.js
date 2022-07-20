@@ -7,7 +7,7 @@ const initialState = {
 export const studentsReducer = (state= initialState, action) => {
   switch (action.type) {
     case SET_STUDENTS:
-      return {... state, students: action.payload };
+      return {...state, students: action.payload };
 
       case SET_FAVORITE:
         return {
