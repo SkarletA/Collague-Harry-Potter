@@ -51,9 +51,9 @@ Este proyecto consiste en una interfaz creada con React, a través de la cual ti
 ## 2. Experiencia
 ¿Qué es lo que más te gustó de tu desarrollo?
 Me encanto como enfrente el reto de tener un prototipo en figma a hacerlo realidad y tener una interfaz responsive que puede filtrar y traer la informacion de los personajes de la saga de Harry Potter
-• Si hubieras tenido más tiempo ¿qué hubieras mejorado o qué más hubieras
-hecho?
-Hubiese colocado unos botones para que al crear un nuevo personaje pudieras escoger a que casas de Howards perteneces y asi personalizar la tarjeta correspondiente, tambien hubiese colocado un boton de editar para editar la informacion faltante en la data y por ultimo realizar mas test de la aplicacion.
+• Si hubieras tenido más tiempo ¿qué hubieras mejorado o qué más hubieras hecho?
+Hubiese colocado unos botones para que al crear un nuevo personaje pudieras escoger a que casas de Howards perteneces y asi personalizar la tarjeta correspondiente, tambien hubiese colocado un boton de editar para editar la informacion faltante en la data y por ultimo realizar test de la aplicacion y mejorar el diseño responsive.
+
 • Descríbenos un pain point o bug con el que te hayas encontrado y como lo solucionaste
 
 Me paso que al darle estilos a las cards estas estaban por encima del modal por lo que la informacion se superpuso, lo logre resolver con la propiedad Z-index la cual indica el orden de un elemento posicionado y sus descendientes.
@@ -67,6 +67,17 @@ Me paso que al darle estilos a las cards estas estaban por encima del modal por 
 </p>
 
 Otro problema al que me enfrente fue el darle funcionalidad al boton de favoritos con Redux tuve inconvenientes en traer toda la data y almacenarla en el payload, me sucedio que la informacion no permanecia en memoria al recargar la pagina, por lo que implemente su funcionalidad con peticiones fetch y crear una tabla de favoritos en donde se almacenara la informacion del personaje que se seleccionara como favorito, tambien que no puedas darle click al boton mas de una vez porq de esa manera dejas de ser favorito y se limitara que solo un maximo de 5 favoritos puedes almacenar.
+
+Intrucciones para cargar la pagina:
+## Local:
+  - usar el comando:  npm start
+
+## Despliegue netlify
+  - ir a la siguiente url:
+  [_netlify_](https://verdant-fudge-27531d.netlify.app/)
+
+ Nota: para en el despliegue no se visualiza la imagen de fondo para vista tablet y desktop
+
 
 
 <p align="right">(<a href="#top">Volver al inicio</a>)</p>
@@ -95,6 +106,21 @@ El prototipo se pueden vizualizar en el siguiente [link](https://www.figma.com/f
 
 <br>
 
+ ### Diseño final
+ ## Mobile
+<p align="center">
+<img src="https://svgshare.com/i/jKM.svg" alt"img-mobile"/>
+</p>
+## Tablet
+<p align="center">
+<img src="https://svgshare.com/i/jL1.svg" alt"img-tablet"/>
+</p>
+## Desktop
+<p align="center">
+<img src="https://svgshare.com/i/jHa.svg" alt"img-desktop"/>
+</p>
+
+
 ## 6. Tecnologías
 ### (Techs Skills)
 - [_Github-project_](https://github.com/SkarletA/Collague-Harry-Potter/projects/1)
@@ -107,6 +133,8 @@ El prototipo se pueden vizualizar en el siguiente [link](https://www.figma.com/f
 - redux 4.2.0
 - react-redux 8.0.2,
 - Jest
+- Netlify
+- mockapi
 
 ## 7. Conocimientos reforzados
 
